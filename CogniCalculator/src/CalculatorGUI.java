@@ -437,15 +437,15 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
-        int length = jTextField1.getText().length(); //rozmiar zmiennej jest równy aktualnej ilości wpisanych znaków
-        int number = jTextField1.getText().length() - 1; //ilość znaków zmieniejszona o jeden
-        String store = ""; //tymczasowy String
-        if(length > 0)
+        int temp1 = jTextField1.getText().length(); //rozmiar zmiennej jest równy aktualnej ilości wpisanych znaków
+        int temp2 = jTextField1.getText().length() - 1; //ilość znaków zmieniejszona o jeden
+        String tempString = ""; //tymczasowy String
+        if(temp1 > 0)
         {
-          StringBuilder back = new StringBuilder(jTextField1.getText()); //StringBuilder jest potrzebny do zmiany w Stringu
-          back.deleteCharAt(number); //usuwa ostatni znak
-          store = back.toString(); //przypisuje tymczasowemu stringowi wartość stringa skróconego o ostatni znak
-          jTextField1.setText(store); //wyświetla ostateczny wynik operacji
+          StringBuilder tempStringBuilder = new StringBuilder(jTextField1.getText()); //StringBuilder jest potrzebny do zmiany w Stringu
+          tempStringBuilder.deleteCharAt(temp2); //usuwa ostatni znak
+          tempString = tempStringBuilder.toString(); //przypisuje tymczasowemu stringowi wartość stringa skróconego o ostatni znak
+          jTextField1.setText(tempString); //wyświetla ostateczny wynik operacji
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
