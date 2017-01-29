@@ -26,6 +26,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jTextField1 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -65,8 +66,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("ON");
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("OFF");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +79,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         jLabel2.setText("KogniLove 2017");
 
-        jButton1.setText("gunwo do radioB");
+        jButton1.setText("<--");
 
         jButton17.setText("=");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -116,14 +119,29 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton34.setText("*");
 
         jButton36.setText("1");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
 
         jButton38.setText(".");
 
         jButton39.setText("0");
 
         jButton41.setText("3");
+        jButton41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton41ActionPerformed(evt);
+            }
+        });
 
         jButton42.setText("2");
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton42ActionPerformed(evt);
+            }
+        });
 
         jButton43.setText("/");
 
@@ -251,6 +269,18 @@ public class CalculatorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton29ActionPerformed
 
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+    jTextField1.setText("1");
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+    jTextField1.setText("2");
+    }//GEN-LAST:event_jButton42ActionPerformed
+
+    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+    jTextField1.setText("3");
+    }//GEN-LAST:event_jButton41ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -287,6 +317,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton19;
