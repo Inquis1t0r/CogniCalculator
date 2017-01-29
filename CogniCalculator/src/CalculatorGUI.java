@@ -16,6 +16,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
     public CalculatorGUI() {
         initComponents();
     }
+    
+    public void disabled(){
+    //TODO disable buttons
+    } 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,6 +83,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jLabel2.setText("KogniLove 2017");
 
         jButton1.setText("<--");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText("=");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +97,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton19.setText("C");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         jButton20.setText("+");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +132,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton27.setText("-");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton29.setText("4");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +160,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton34.setText("*");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
 
         jButton36.setText("1");
         jButton36.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +174,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton38.setText(".");
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
 
         jButton39.setText("0");
         jButton39.addActionListener(new java.awt.event.ActionListener() {
@@ -173,6 +202,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton43.setText("/");
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton43ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -291,7 +325,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
+    jTextField1.setText(jTextField1.getText() + "+");
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
@@ -333,6 +367,41 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
     jTextField1.setText(jTextField1.getText() + "0");
     }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+    jTextField1.setText(jTextField1.getText() + "-");
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+     jTextField1.setText(jTextField1.getText() + "*");
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+    jTextField1.setText(jTextField1.getText() + "/");
+    }//GEN-LAST:event_jButton43ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+    jTextField1.setText(jTextField1.getText() + ".");
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    jTextField1.setText(" ");
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+        int length = jTextField1.getText().length(); //rozmiar zmiennej jest równy aktualnej ilości wpisanych znaków
+        int number = jTextField1.getText().length() - 1; //ilość znaków zmieniejszona o jeden
+        String store = ""; //tymczasowy String
+        if(length > 0)
+        {
+          StringBuilder back = new StringBuilder(jTextField1.getText()); //StringBuilder jest potrzebny do zmiany w Stringu
+          back.deleteCharAt(number); //usuwa ostatni znak
+          store = back.toString(); //przypisuje tymczasowemu stringowi wartość stringa skróconego o ostatni znak
+          jTextField1.setText(store); //wyświetla ostateczny wynik operacji
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
