@@ -15,7 +15,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
      * Creates new form CalculatorGUI
      */
     double aktualnaLiczba, wynik; //musi być double, ze względu na wynik dzielenia, który może być ułamkiem (aktualna liczba, to to co zostało wpisane do tek pory)
-    int operation; //numer operacji do przeprowadzenia (1+,2-,3/,4*)
+    int operacja; //numer operacji do przeprowadzenia (1+,2-,3/,4*)
     Double wyswietlaczTemp;
     
     
@@ -25,7 +25,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     
     public void operacjeMatematyczne(){
     
-            switch(operation)
+            switch(operacja)
             {
                 case 1://dodawanie
                     wynik = aktualnaLiczba + Double.parseDouble(jTextField1.getText());
@@ -362,7 +362,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
    
     aktualnaLiczba = Double.parseDouble(jTextField1.getText()); //parsowanie liczb z typu String na Double
-    operation = 1; //wywołanie metody calculation i wybór pierwszej możliwości
+    operacja = 1; //wywołanie metody calculation i wybór pierwszej możliwości
     jTextField1.setText(" "); //wyczyszczenie wyśletlacza
     jLabel1.setText(aktualnaLiczba + "+");
     }//GEN-LAST:event_jButton20ActionPerformed
@@ -409,21 +409,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
     aktualnaLiczba = Double.parseDouble(jTextField1.getText()); 
-    operation = 2; 
+    operacja = 2; 
     jTextField1.setText(" "); 
     jLabel1.setText(aktualnaLiczba + "-");
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
       aktualnaLiczba = Double.parseDouble(jTextField1.getText()); 
-    operation = 3; 
+    operacja = 3; 
     jTextField1.setText(" "); 
     jLabel1.setText(aktualnaLiczba + "*");
     }//GEN-LAST:event_jButton34ActionPerformed
 
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
       aktualnaLiczba = Double.parseDouble(jTextField1.getText()); 
-    operation = 4; 
+    operacja = 4; 
     jTextField1.setText(" "); 
     jLabel1.setText(aktualnaLiczba + "/");
     }//GEN-LAST:event_jButton43ActionPerformed
