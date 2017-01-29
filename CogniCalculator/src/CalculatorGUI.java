@@ -399,7 +399,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-    jTextField1.setText(jTextField1.getText() + "1");
+    jTextField1.setText(jTextField1.getText() + "9");
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
