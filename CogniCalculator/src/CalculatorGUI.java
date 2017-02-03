@@ -31,7 +31,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     wynik = aktualnaLiczba + Double.parseDouble(jTextField1.getText());
                     wyswietlaczTemp = (Double.parseDouble(jTextField1.getText()));
                     jTextField1.setText(Double.toString(wynik)); //jTextField musi wyślwietlić string, stąd parsowanie
-                   // jTextField1.setText((int)aktualnaLiczba + " + " + wyswietlaczTemp + " = " + (int)wynik); //(int) pozbywa się ułamków (1 zamiast 1.0)
+                    if(aktualnaLiczba%2 == 0 && wyswietlaczTemp%2 == 0 && wynik%2 == 0){
+                    jTextField1.setText((int)aktualnaLiczba + " + " + wyswietlaczTemp + " = " + (int)wynik); //(int) pozbywa się ułamków (1 zamiast 1.0)
+                    }
+                    else
                     jTextField1.setText(aktualnaLiczba + " + " + wyswietlaczTemp + " = " + wynik);
                     break;
 
@@ -39,6 +42,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     wynik = aktualnaLiczba - Double.parseDouble(jTextField1.getText());
                     wyswietlaczTemp = (Double.parseDouble(jTextField1.getText()));
                     jTextField1.setText(Double.toString(wynik)); 
+                    if(aktualnaLiczba%2 == 0 && wyswietlaczTemp%2 == 0 && wynik%2 == 0){
+                    jTextField1.setText((int)aktualnaLiczba + " - " + wyswietlaczTemp + " = " + (int)wynik); //(int) pozbywa się ułamków (1 zamiast 1.0)
+                    }
+                    else
                     jTextField1.setText(aktualnaLiczba + " - " + wyswietlaczTemp + " = " + wynik);
                     break;
 
@@ -46,6 +53,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     wynik = aktualnaLiczba * Double.parseDouble(jTextField1.getText());
                     wyswietlaczTemp = (Double.parseDouble(jTextField1.getText()));
                     jTextField1.setText(Double.toString(wynik)); 
+                    if(aktualnaLiczba%2 == 0 && wyswietlaczTemp%2 == 0 && wynik%2 == 0){
+                    jTextField1.setText((int)aktualnaLiczba + " * " + wyswietlaczTemp + " = " + (int)wynik); //(int) pozbywa się ułamków (1 zamiast 1.0)
+                    }
+                    else
                     jTextField1.setText(aktualnaLiczba + " * " + wyswietlaczTemp + " = " + wynik);
                     break;
 
@@ -53,6 +64,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     wynik = aktualnaLiczba / Double.parseDouble(jTextField1.getText());
                     wyswietlaczTemp = (Double.parseDouble(jTextField1.getText()));
                     jTextField1.setText(Double.toString(wynik)); 
+                    if(aktualnaLiczba%2 == 0 && wyswietlaczTemp%2 == 0 && wynik%2 == 0){
+                    jTextField1.setText((int)aktualnaLiczba + " / " + wyswietlaczTemp + " = " + (int)wynik); //(int) pozbywa się ułamków (1 zamiast 1.0)
+                    }
+                    else
                     jTextField1.setText(aktualnaLiczba + " / " + wyswietlaczTemp + " = " + wynik);
                     break;
       
@@ -72,7 +87,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -490,7 +504,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton19;
